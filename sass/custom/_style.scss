@@ -1,0 +1,229 @@
+/* Alaa */
+
+.aya{
+    > div.ar{
+        background-color: #F5F4EF;
+        text-align: right;
+        padding: 8px 16px 8px 38px;
+        border-radius: 4px 4px 0 0;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+
+        a{
+            position: absolute;
+            text-decoration: none;
+            left: 8px;
+            top: 8px;
+            font-size: small;
+            display: block;
+            padding: 0 8px;
+        }
+    }
+
+    > ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        background-color: #ECEBE6;
+        border-radius: 0 0 4px 4px;
+
+        li{
+            padding: 0 8px;
+            font-size: small;
+            font-family: sans-serif;
+
+            &.ar{
+                text-align: right;
+                flex: 1;
+            }
+        }
+    }
+}
+  
+menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    background-color: #F5F4EF;
+    z-index: 99;
+    padding: 0 calc((100vw - 1200px)*.5);
+
+    body.admin-bar &{
+        top: 32px;
+    }
+
+    > div{
+        flex: 1;
+    }
+
+    .site-branding{
+        margin: none;
+    }
+
+    .dynamic_search label{
+        display: none;
+    }
+
+    .site-title{
+        a{
+            font-family: $font__body;
+        }
+    }
+}
+
+.content-wrapper{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+
+    .content-area{
+        border-right: 1px solid #C4C4C4;
+
+        main{
+            .page-header{
+                margin: 0;
+            }
+            .page-title b{
+                display: none;
+            }
+            .entry{
+                border-bottom: 1px solid #C4C4C4;
+                margin-top: 32px;
+            }
+            .entry-header{
+                margin: 0;
+                .entry-title{
+                    padding-right: 40px;
+                }
+            }
+
+            .entry-content{
+                p{
+                    margin: 0;
+
+                    &.link-more{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wp-block-search__inside-wrapper{
+    padding: 4px 0 4px 12px;
+    border-left: #D6CBC7 1px solid;
+}
+.wp-block-search__input{
+    border: none !important;
+    background: none !important;
+    
+    font-size: $font__size-sm;
+    font-family: $font__heading;
+}
+.wp-block-search__button{
+    background: transparent url(images/icons/search.svg);
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    text-indent: 200%;
+    border-radius: 16px;
+    border: none;
+    margin: 8px;
+}
+.wp-block-search__button:hover{
+    background: rgba(0,0,0,.1) url(images/icons/search.svg);
+}
+
+.right-content{
+
+    max-width: 340px;
+
+    h3{
+        font-size: $font__size-xs;
+        text-transform: uppercase;
+        padding: 8px 0 8px 12px;
+        margin: 0;
+    }
+
+    .entry{
+        margin-top: 0;
+        border-top: 1px solid #C4C4C4;
+        padding: 8px 0 8px 12px;
+    }
+
+    article{
+        display: flex;
+
+        figure.post-thumbnail{
+            margin: 0 24px 0 0;
+            max-width: 80px;
+            
+            &::before, &::after{
+                display: none !important;
+            }
+        }
+
+        h2.entry-title{
+            padding: 0;
+            margin: 0 0 4px 0;
+            font-size: $font__size-md;
+            text-transform: uppercase;
+
+            a{
+                text-decoration: none;
+            }
+        }
+
+        .entry-content{
+            p{
+                font-size: $font__size-xs;
+                line-height: 1.1;
+                font-family: $font__heading;
+                margin: 0;
+
+                &.link-more{
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
+
+.entry-sidebar{
+    border-left: 1px solid #C4C4C4;
+    padding: 32px 0 32px 32px;
+
+    .entry-sidebar-inside{
+        span{
+            font-size: $font__size-xs;
+            text-transform: uppercase;
+            padding: 0 0 24px 0;
+            margin: 0;
+            font-family: $font__heading;
+            display: block;
+        }
+    }
+
+    ul, li{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a{
+            display: inline-block;
+        }
+
+        &.H3 a{ padding-left: 10px; font-size: $font__size-sm; }
+        &.H4 a{ padding-left: 20px; font-size: $font__size-xs; }
+        &.H5 a{ padding-left: 30px; font-size: $font__size-xxs; }
+    }
+}
